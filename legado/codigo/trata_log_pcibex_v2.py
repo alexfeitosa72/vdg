@@ -9,11 +9,8 @@ Original file is located at
 
 # Importando bibliotecas necessárias
 import pandas as pd
-from google.colab import files
-import openpyxl
 
-# Carregar o arquivo CSV (faça o upload no Google Colab usando o botão de upload)
-uploaded = files.upload()
+
 
 # Nome do arquivo CSV (substitua pelo nome do arquivo importado)
 file_name = "results_dev.csv"  # Coloque o nome correto do arquivo
@@ -44,6 +41,3 @@ except FileNotFoundError:
     with pd.ExcelWriter(excel_file_name, engine='openpyxl') as writer:
         for nome_grupo, grupo_df in grupos:
             grupo_df.to_excel(writer, sheet_name=str(nome_grupo), index=False)
-
-# Baixar o arquivo Excel atualizado
-files.download(excel_file_name)
