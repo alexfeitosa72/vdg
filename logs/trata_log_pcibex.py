@@ -56,7 +56,7 @@ def main():
     base_item_number = 0
     
     # Use relative path for logs folder
-    log_folder = os.path.join("tratamento_de_logs\logs_brutos")
+    log_folder = os.path.join("logs\logs_brutos")
     base_filename = "results_prod"
     
     # Process base file and numbered files
