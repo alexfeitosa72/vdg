@@ -1,0 +1,26 @@
+{
+    "sourceFile": "logs/corrige_bug_log.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1744633595687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744633601615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import csv\r\n import pandas as pd\r\n \r\n-with open(\"MQD_1465_final.csv\", encoding='utf-8') as f:\r\n+with open(\"dadosMQD_1465_final.csv\", encoding='utf-8') as f:\r\n     reader = csv.reader(f, delimiter=',', quotechar='\"', skipinitialspace=True)\r\n     data = list(reader)\r\n \r\n # Criar DataFrame manualmente\r\n"
+                },
+                {
+                    "date": 1744633617049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +0,0 @@\n-import csv\r\n-import pandas as pd\r\n-\r\n-with open(\"dadosMQD_1465_final.csv\", encoding='utf-8') as f:\r\n-    reader = csv.reader(f, delimiter=',', quotechar='\"', skipinitialspace=True)\r\n-    data = list(reader)\r\n-\r\n-# Criar DataFrame manualmente\r\n-header, *rows = data\r\n-df = pd.DataFrame(rows, columns=header)\r\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1744633595687,
+            "name": "Commit-0",
+            "content": "import csv\r\nimport pandas as pd\r\n\r\nwith open(\"MQD_1465_final.csv\", encoding='utf-8') as f:\r\n    reader = csv.reader(f, delimiter=',', quotechar='\"', skipinitialspace=True)\r\n    data = list(reader)\r\n\r\n# Criar DataFrame manualmente\r\nheader, *rows = data\r\ndf = pd.DataFrame(rows, columns=header)\r\n"
+        }
+    ]
+}
